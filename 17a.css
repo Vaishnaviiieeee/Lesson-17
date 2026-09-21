@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.video-card img {
+    width: 100%;
+    display: block;
+}
+.thumbnail-wrapper {
+    position: relative;
+}
+.duration {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+.info-row {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+}
+.channel-pic {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+.video-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+.channel-name, .meta {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* 17a: on wider screens, bump up text sizes */
+@media (min-width: 1000px) {
+    .video-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .channel-name, .meta {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
